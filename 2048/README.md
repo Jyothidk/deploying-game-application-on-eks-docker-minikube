@@ -65,15 +65,16 @@ Verify that the NGINX Ingress controller is running
  kubectl get pods -n ingress-nginx
 ```
 
-![image](https://github.com/Jyothidk/Deploying-game-application-on-EKS/assets/127189060/4c9392e8-c4f2-4462-8002-bc74ccb6509e)
+![a5](https://github.com/Jyothidk/deploying-game-application-on-eks-docker-minikube/assets/127189060/d33dd589-71bb-4dfe-9c40-54d611251033)
 
 Now check the Ingress resource , it should be assigned with address
 
-![image](https://github.com/Jyothidk/Deploying-game-application-on-EKS/assets/127189060/07f788f1-10a4-4c13-b396-726a6979c10b)
+![a6](https://github.com/Jyothidk/deploying-game-application-on-eks-docker-minikube/assets/127189060/fae6c407-a727-4563-b6d9-7fd94802c792)
 
 Now access the address on port 80
 
-![image](https://github.com/Jyothidk/Deploying-game-application-on-EKS/assets/127189060/9f88e76f-8dec-406e-bb71-62c44d689b2b)
+![a7](https://github.com/Jyothidk/deploying-game-application-on-eks-docker-minikube/assets/127189060/5df0c03c-0348-4977-bfc9-e9338419b8c0)
+
 
 ## Cleanup the resources
 
