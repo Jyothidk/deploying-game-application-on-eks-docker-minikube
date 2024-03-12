@@ -8,7 +8,7 @@ Prerequisites: Install kubectl, eksctl and aws cli and configure it on your syst
 eksctl create cluster --name demo-cluster --region eu-central-1 --fargate
 ```
 
-![1](https://github.com/Jyothidk/Deploying-game-application-on-EKS/assets/127189060/f9cd8c4e-aa77-45cb-8afb-bc3f1f1e1e25)
+![alt text](1.png)
 
 Update eks kubeconfig 
 ```
