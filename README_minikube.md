@@ -2,7 +2,13 @@
 
 Now we have docker image for game-2048 in Docker hub. 
 Start minikube. Maku sure your kubernetes cluster is running.
-    
+
+## Clone the repository
+ ```
+ git clone https://github.com/Jyothidk/Deploying-game-application-on-EKS.git
+ cd Deploying-game-application-on-EKS/
+
+```
 ## Deploy the deployment, service and Ingress 
 
 ```
