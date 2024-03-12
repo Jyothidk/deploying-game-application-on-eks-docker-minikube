@@ -22,23 +22,23 @@ eksctl create fargateprofile \
     --name alb-sample-app \
     --namespace game-2048
 
-![2](https://github.com/Jyothidk/Deploying-game-application-on-EKS/assets/127189060/173a7e18-1165-4d83-a1c4-04cc2bf1ad6b)
+![alt text](2.png)
 
 ## Deploy the deployment, service and Ingress
 ```
 kubectl apply -f manifests.yaml
 ```
 
-![jyo-last](https://github.com/Jyothidk/Deploying-game-application-on-EKS/assets/127189060/4e4deb76-6bd1-4d51-9fd6-b69c48691d73)
+![alt text](jyo-last.png)
 
 
-![4](https://github.com/Jyothidk/Deploying-game-application-on-EKS/assets/127189060/caa32590-26ef-4e5b-a2e9-f3d1e520535c)
+![alt text](4.png)
 
 ## Configure IAM OIDC provider
 ```
 eksctl utils associate-iam-oidc-provider --cluster demo-cluster --approve
 ```
-![5](https://github.com/Jyothidk/Deploying-game-application-on-EKS/assets/127189060/c92d107a-6216-4b12-bc7e-48d3a1c4ccc3)
+![alt text](5.png)
 
 ## How to setup alb add on
 
@@ -56,7 +56,7 @@ aws iam create-policy \
     --policy-document file://iam_policy.json
 ```
 
-![6](https://github.com/Jyothidk/Deploying-game-application-on-EKS/assets/127189060/8f26feac-eba1-4c78-aa42-c5faf574903b)
+![alt text](6.png)
 
 Create service account and IAM Role
 
@@ -70,7 +70,7 @@ eksctl create iamserviceaccount \
   --approve
 ```
 
-![7-1](https://github.com/Jyothidk/Deploying-game-application-on-EKS/assets/127189060/22969296-9905-4927-b9df-3f94cc96b03e)
+![alt text](7.png)
 
 
 ## Deploy ALB controller
@@ -99,7 +99,7 @@ helm install aws-load-balancer-controller eks/aws-load-balancer-controller \
   --set vpcId=vpc-0b031ee8ca5d57d1b
 ```
 
-![8](https://github.com/Jyothidk/Deploying-game-application-on-EKS/assets/127189060/dbffda08-f93a-47e7-a5e6-2c2c888f16ca)
+![alt text](8.png)
 
 Verify that the deployments are running.
 
@@ -107,15 +107,15 @@ Verify that the deployments are running.
 kubectl get deployment -n kube-system aws-load-balancer-controller
 ```
 
-![9](https://github.com/Jyothidk/Deploying-game-application-on-EKS/assets/127189060/3db8a096-8cdd-46e6-85a8-92a8a308a3ca)
+![alt text](9.png)
 
 Now check the Ingress, it should be updated with address & this adress should be same as ALB DNS
 
-![10-13](https://github.com/Jyothidk/Deploying-game-application-on-EKS/assets/127189060/91789faf-fee7-4d2d-98ae-a9687d130f77)
+![alt text](10-13.png)
 
-![11](https://github.com/Jyothidk/Deploying-game-application-on-EKS/assets/127189060/494ef27e-7d4f-469b-b132-9efb03039990)
+![alt text](11.png)
 
 Now open the address on the browser
 
-![12](https://github.com/Jyothidk/Deploying-game-application-on-EKS/assets/127189060/f70f2b73-5c5f-46b0-80d8-3980bdd57c20)
+![alt text](12.png)
 
