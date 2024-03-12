@@ -22,23 +22,23 @@ eksctl create fargateprofile \
     --name alb-sample-app \
     --namespace game-2048
 
-![alt text](2.png)
+![alt text](./images/2.png)
 
 ## Deploy the deployment, service and Ingress
 ```
 kubectl apply -f manifests.yaml
 ```
 
-![alt text](jyo-last.png)
+![alt text](./images/jyo-last.png)
 
 
-![alt text](4.png)
+![alt text](./images/4.png)
 
 ## Configure IAM OIDC provider
 ```
 eksctl utils associate-iam-oidc-provider --cluster demo-cluster --approve
 ```
-![alt text](5.png)
+![alt text](./images/5.png)
 
 ## How to setup alb add on
 
@@ -56,7 +56,7 @@ aws iam create-policy \
     --policy-document file://iam_policy.json
 ```
 
-![alt text](6.png)
+![alt text](./images/6.png)
 
 Create service account and IAM Role
 
@@ -70,7 +70,7 @@ eksctl create iamserviceaccount \
   --approve
 ```
 
-![alt text](7.png)
+![alt text](./images/7.png)
 
 
 ## Deploy ALB controller
@@ -99,7 +99,7 @@ helm install aws-load-balancer-controller eks/aws-load-balancer-controller \
   --set vpcId=vpc-0b031ee8ca5d57d1b
 ```
 
-![alt text](8.png)
+![alt text](./images/8.png)
 
 Verify that the deployments are running.
 
@@ -107,15 +107,15 @@ Verify that the deployments are running.
 kubectl get deployment -n kube-system aws-load-balancer-controller
 ```
 
-![alt text](9.png)
+![alt text](./images/9.png)
 
 Now check the Ingress, it should be updated with address & this adress should be same as ALB DNS
 
-![alt text](10-13.png)
+![alt text](./images/10-13.png)
 
-![alt text](11.png)
+![alt text](./images/11.png)
 
 Now open the address on the browser
 
-![alt text](12.png)
+![alt text](./images/12.png)
 
