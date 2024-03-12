@@ -8,7 +8,7 @@ Prerequisites: Install kubectl, eksctl and aws cli and configure it on your syst
 eksctl create cluster --name demo-cluster --region eu-central-1 --fargate
 ```
 
-![alt text]( /deploying-game-application-on-eks-docker-minikube/images/1.png)
+![alt text]( ./images/1.png)
 
 Update eks kubeconfig 
 ```
