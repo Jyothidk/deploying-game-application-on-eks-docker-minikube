@@ -34,22 +34,23 @@ Start minikube. Maku sure your kubernetes cluster is running.
 ```
  kubectl apply -f manifests_minikube.yaml
 ```
-![image](https://github.com/Jyothidk/Deploying-game-application-on-EKS/assets/127189060/b3ea3d9f-ff77-4be4-b3b9-58705e84bd1d)
+![a1](https://github.com/Jyothidk/deploying-game-application-on-eks-docker-minikube/assets/127189060/2c999251-3617-4ae7-b49c-61d5bac93625)
 
 ## Visit the Service via NodePort and the output is
 
-![image](https://github.com/Jyothidk/Deploying-game-application-on-EKS/assets/127189060/41e36917-d4ad-42e8-b6d1-a5583da73529)
+![a2](https://github.com/Jyothidk/deploying-game-application-on-eks-docker-minikube/assets/127189060/cf8438a2-6670-4466-afa3-a5973b51c01b)
 
 Now access the URL from the browser on node port : 32724
 
-![image](https://github.com/Jyothidk/Deploying-game-application-on-EKS/assets/127189060/d8fc84a3-bb02-4194-98e8-9c276ae6a210)
+![a3](https://github.com/Jyothidk/deploying-game-application-on-eks-docker-minikube/assets/127189060/d61ab862-1e3e-4c9f-80be-f7010b1a2bac)
+
 
 
 ## Now access the game using Ingress Resource
 
 Currently Ingress resource doesn't have address assigned
 
-![image](https://github.com/Jyothidk/Deploying-game-application-on-EKS/assets/127189060/672c6567-9b49-4aad-9b66-570dc6aa8c8c)
+![a4](https://github.com/Jyothidk/deploying-game-application-on-eks-docker-minikube/assets/127189060/5365cd12-f4cf-423e-8a9e-55cfa7b55a42)
 
 Now deploy the Nginx ingress controller on minikube
 
