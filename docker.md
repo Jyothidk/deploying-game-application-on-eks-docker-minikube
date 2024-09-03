@@ -6,8 +6,8 @@ A smaller docker version of 2048.
 ## Build the image from the Docker file and run the container.
 
  ```
- git clone https://github.com/Jyothidk/Deploying-game-application-on-EKS.git
- cd Deploying-game-application-on-EKS/
+ git clone https://github.com/Jyothidk/deploying-game-application-on-eks-docker-minikube.git
+ cd deploying-game-application-on-eks-docker-minikube/
  docker build -t jyothi5566/game-2048:v1 .
  docker run -d -p 8080:80 --name web jyothi5566/game-2048:v1
 ```
